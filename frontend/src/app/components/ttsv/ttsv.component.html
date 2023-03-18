@@ -1,0 +1,120 @@
+<!-- Header -->
+<div class="container-build">
+    <div class="box header-left">Quản lý sinh viên</div>
+    <!-- Header bên phải -->
+    <div class="box header-right">
+      <a href="account" class="logout">Đăng xuất</a> 
+    </div>
+  </div> 
+  <!--Main-->      
+        <!-- danh sách chọn -->
+        <div class="container-build"> 
+          <div class="list">
+            <div class="list-group">
+              <div class="list-trangchu">
+                <i class="fas fa-home"></i>
+                <a href="#" class="item" >Trang chủ</a>
+              </div>
+              <div class="list-sv">
+                <i class="fas fa-user-graduate"></i>
+                <a href="sinhvien" class="item">Sinh viên</a>
+              </div>
+              <div class="list-khoa">
+                <i class="fas fa-school"></i>
+                <a href="khoa" class="item">Khoa</a>
+              </div>
+              <div class="list-monhoc">
+                <i class="fas fa-book-open"></i>
+                <a href="monhoc" class="item">Môn học</a>
+              </div>
+              <div class="list-diem">
+                <i class="fas fa-folder"></i>
+                <a href="diem" class="item">Điểm</a>
+              </div>
+              <div class="list-gv">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <a href="giaovien" class="item">Giáo viên</a>
+              </div>
+              <div class="list-lop">
+                <i class="fas fa-user-friends"></i>
+                <a href="lophoc" class="item">Lớp học</a>
+              </div>
+            </div>
+          </div>
+ <!-- Modal --> 
+        <div class="headerttsv">
+          <h3>Thông tin sinh viên</h3>
+        </div>
+      </div>
+      <div class="body-SV">
+ <!--Hình ảnh sinh viên-->         
+          <div class="box picture">
+            <div class="profile-userpic">
+                <img src="./assets/images/icnv.jpg">
+              </div> 
+          </div>
+ <!--Thông tin sinh viên-->  
+    <form [formGroup]="sinhvienForm">
+          <div class="box info" >
+            <label class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Mã số sinh viên:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.mssv}}</span>
+            </label>
+            <label class="col-xs-6" style="margin-left:20%" *ngFor = 'let us of readData'>
+                <span lang="#">Tên sinh viên:</span>&nbsp;
+                <span class="bold">{{us.ten}}</span>
+            </label>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Giới tính:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.gioitinh}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Lớp học:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.ml}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Sinh viên khoa:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.mk}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Bậc đào tạo:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.bdt}}</span>
+            </div>
+            <div class="kc"></div>
+            <label class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Số tính chỉ cần đạt:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.stc}}</span>
+            </label>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Ghi chú:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.ghichu}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Địa chỉ:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.diachi}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Gmail:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.gmail}}</span>
+            </div>
+            <div class="kc"></div>
+            <div class="col-xs-6" *ngFor = 'let us of readData'>
+                <span lang="#">Nơi sinh:</span>&nbsp;&nbsp;
+                <span class="bold">{{us.noisinh}}</span>
+            </div>
+          </div>
+        </form>
+          <a href="sinhvien">
+            <button class="btn btn-primary btn-sm" style="margin-top: 1%; margin-left: 75%;">Trở về</button>
+          </a>
+          
+      </div>      
+
+   

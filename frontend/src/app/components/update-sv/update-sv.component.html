@@ -1,0 +1,94 @@
+<!-- Header -->
+<div class="container-build">
+  <div class="box header-left">Quản lý sinh viên</div>
+  <!-- Header bên phải -->
+  <div class="box header-right">
+    <a href="sinhvien" class="fas fa-backward"></a>
+    <a href="account" class="logout">Đăng xuất</a> 
+  </div>
+</div> 
+<!--Main-->      
+      <!-- danh sách chọn -->
+      <div class="container-build"> 
+        <div class="list">
+          <div class="list-group">
+            <div class="list-trangchu">
+              <i class="fas fa-home"></i>
+              <a href="#" class="item" >Trang chủ</a>
+            </div>
+            <div class="list-sv">
+              <i class="fas fa-user-graduate"></i>
+              <a href="sinhvien" class="item">Sinh viên</a>
+            </div>
+            <div class="list-khoa">
+              <i class="fas fa-school"></i>
+              <a href="khoa" class="item">Khoa</a>
+            </div>
+            <div class="list-monhoc">
+              <i class="fas fa-book-open"></i>
+              <a href="monhoc" class="item">Môn học</a>
+            </div>
+            <div class="list-diem">
+              <i class="fas fa-folder"></i>
+              <a href="diem" class="item">Điểm</a>
+            </div>
+            <div class="list-gv">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <a href="giaovien" class="item">Giáo viên</a>
+            </div>
+            <div class="list-lop">
+              <i class="fas fa-user-friends"></i>
+              <a href="lophoc" class="item">Lớp học</a>
+            </div>
+          </div>
+        </div>
+<!-- Nội dung update sinh viên-->  
+        <div class="box main">    
+         <form [formGroup]="sinhvienForm" (ngSubmit)="sinhvienSubmit()">
+            <div class="cn" style="margin-left: 32%;">Cập nhật thông tin sinh viên</div>     
+             <div class="khoangcach"></div>  
+                 <input type="text" formControlName="ten">
+               
+            <div class="khoangcach"></div>  
+                <input type="text" formControlName="gioitinh" >
+            
+            <div class="khoangcach"></div>  
+                <input type="text" formControlName="ml" >
+            
+            <div class="khoangcach"></div>  
+                <input type="text" formControlName="gmail" >
+     
+           <div class="khoangcach"></div>   
+                 <input type="text" formControlName="mk">
+             
+            <div class="khoangcach"></div> 
+                 <input type="text" formControlName="diachi">     
+        
+            <div class="khoangcach"></div>   
+                <input type="text" formControlName="noisinh">
+
+            <div class="khoangcach"></div>   
+                <input type="text" formControlName="bdt">
+                
+            <div class="khoangcach"></div>   
+                <input type="text" formControlName="stc">
+                
+            <div class="khoangcach"></div>   
+                <input type="text" formControlName="ghichu">
+
+            <div class="up-btxnsv" *ngIf="getparammssv" (click)="userUpdate()">
+                <button class="btn btn-primary btn-sm" style="margin-top: 1%; margin-left: 62%;">Cập nhật</button>
+            </div>
+            <!--Show thông báo lỗi-->                      
+          <div *ngIf="errormsg"  class="alert alert-danger alert-dismissible fade show" style="width: 40%;margin-left: 24.5%; margin-top: 2%;" role="alert">
+            <strong>{{errormsg}}</strong>
+            <button class="btn-close" type="button"  data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>          
+<!--Show thông báo lỗi-->                      
+        <div *ngIf="successmsg"  class="alert alert-success alert-dismissible fade show" style="width: 40%;margin-left: 24.5%; margin-top: 2%;" role="alert">
+          <strong>{{successmsg}}</strong>
+          <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>      
+         </form>   
+     </div>   
+          

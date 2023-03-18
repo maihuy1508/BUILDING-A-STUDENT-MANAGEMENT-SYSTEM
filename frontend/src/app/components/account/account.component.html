@@ -1,0 +1,13 @@
+<div class="container-login">
+    <form [formGroup]="formGroup" (ngSubmit)="loginProces()" novalidate class="form-login" method="POST" action="/account">
+        <h1>Đăng nhập</h1>
+        <div class="form-text">
+            <input formControlName="email" type="text" placeholder="Email" >
+        </div>
+        <div class="form-text">   
+            <input formControlName="password" type="password" placeholder="Password">
+        </div>
+        <button mat-raised-button type="submit">Đăng nhập</button>
+        <a href="signup">Đăng ký</a>
+    </form>
+</div>

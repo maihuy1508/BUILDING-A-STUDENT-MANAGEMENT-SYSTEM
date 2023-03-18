@@ -1,0 +1,69 @@
+<!-- Header -->
+<div class="container-build">
+    <div class="box header-left">Quản lý sinh viên</div>
+    <!-- Header bên phải -->
+    <div class="box header-right">
+      <a href="lophoc" class="fas fa-backward"></a>
+      <a href="account" class="logout">Đăng xuất</a> 
+    </div>
+  </div> 
+  <!--Main-->      
+        <!-- danh sách chọn -->
+        <div class="container-build"> 
+          <div class="list">
+            <div class="list-group">
+              <div class="list-trangchu">
+                <i class="fas fa-home"></i>
+                <a href="#" class="item" >Trang chủ</a>
+              </div>
+              <div class="list-sv">
+                <i class="fas fa-user-graduate"></i>
+                <a href="sinhvien" class="item">Sinh viên</a>
+              </div>
+              <div class="list-khoa">
+                <i class="fas fa-school"></i>
+                <a href="khoa" class="item">Khoa</a>
+              </div>
+              <div class="list-monhoc">
+                <i class="fas fa-book-open"></i>
+                <a href="monhoc" class="item">Môn học</a>
+              </div>
+              <div class="list-diem">
+                <i class="fas fa-folder"></i>
+                <a href="diem" class="item">Điểm</a>
+              </div>
+              <div class="list-gv">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <a href="giaovien" class="item">Giáo viên</a>
+              </div>
+              <div class="list-lop">
+                <i class="fas fa-user-friends"></i>
+                <a href="lophoc" class="item">Lớp học</a>
+              </div>
+            </div>
+          </div>
+        </div>  
+  <!-- Nội dung update Khoa-->  
+      <div class="container-build">  
+        <!--Báo lỗi thêm Khoa-->
+        <form  >
+          <div class="cn" style="text-align: center">Thêm thông tin Khoa</div>
+              <input type="text" formControlName="ml" placeholder="Mã lớp">
+              <input type="text" formControlName="mk" placeholder="Mã Khoa">
+              <div class="btxnsv">
+                <button class="btn btn-primary btn-sm" style="margin-top: 1%; margin-left: 54%;">Xác nhận</button>
+              </div>
+<!--Show thông báo lỗi-->                      
+      <div *ngIf="errormsg"  class="alert alert-danger alert-dismissible fade show" style="width: 40%;margin-left: 40%; margin-top: 2%;" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button class="btn-close"  data-bs-dismiss="alert" aria-label="Close">Đóng</button>
+      </div>          
+      <!--Show thông báo lỗi-->                      
+      <div *ngIf="successmsg"  class="alert alert-success alert-dismissible fade show" style="width: 40%;margin-left: 40%; margin-top: 2%;" role="alert">
+      <strong>{{successmsg}}</strong>
+      <button  class="btn-close"  type="button" data-bs-dismiss="alert" aria-label="Close">Đóng</button>
+      </div>                                
+      </form>        
+      </div>         
+          
+            

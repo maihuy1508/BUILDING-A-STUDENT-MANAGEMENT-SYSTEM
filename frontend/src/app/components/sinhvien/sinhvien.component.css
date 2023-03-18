@@ -1,0 +1,92 @@
+.main-sv{
+  background-color: white;
+  margin: 2%;
+  width: 100%;
+}
+
+.vd{
+  margin:10%;
+  background-color: red;
+  width: 10%;
+  height: 20px;
+}
+
+.md-headersv{
+  border-bottom: 1px solid rgb(199, 195, 195);
+  text-align: center;
+}
+
+.md-bodysv{
+  margin: 5%; 
+  color: #000;
+  
+}
+
+.col-xs-6{
+  margin:6px;
+}
+
+.profile-userpic{
+  align-items: center;
+}
+
+.kc{
+  width: 30%;
+}
+
+.kc1{
+  width: 19%;
+}
+
+.modal-contentDe{
+  background-color:white;
+}
+
+.modal-sinhvien{
+  background-color: white;
+}
+
+.chart-layout{
+  margin: 36px auto 0 auto;
+  padding: 32px 0;
+  width: 100%;
+  height: 400px;
+  background-color:white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  
+}
+
+.chart-layout__item{
+  width: 50px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: var(--percent);
+  background-color:rgb(182, 63, 8);
+  animation: growth ease-in 0.5s;
+}
+
+@keyframes growth {
+  from {
+      opacity: 0;
+      height: calc(var(--percent) - 50%);
+  }
+  to {
+      opacity: 1;
+      height: var(--percent);
+  }
+}
+.chart{
+  width: 100%;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+
+
+
+

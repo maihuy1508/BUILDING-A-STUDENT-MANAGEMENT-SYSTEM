@@ -1,0 +1,16 @@
+<div class="container-login">
+    <form [formGroup]="signupForm" (ngSubmit)="signup()" novalidate  novalidate class="form-login" >
+        <h1>Đăng ký</h1>
+        <div class="form-text">
+            <input formControlName="name" type="text" placeholder="Username">
+        </div>
+        <div class="form-text">
+            <input formControlName="email" type="text" placeholder="Email">
+        </div>
+        <div class="form-text">   
+            <input formControlName="password" type="password" placeholder="Password">
+        </div>
+        <button mat-raised-button type="submit" (click) = "signup()">Đăng ký</button>
+        <a href="account">Đăng nhập</a>
+    </form>
+</div>

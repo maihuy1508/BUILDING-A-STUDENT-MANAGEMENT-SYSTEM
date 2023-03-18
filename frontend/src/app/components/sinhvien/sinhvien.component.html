@@ -1,0 +1,89 @@
+<!-- Header -->
+<div class="container-build">
+  <div class="box header-left">Quản lý sinh viên</div>
+  <!-- Header bên phải -->
+  <div class="box header-right">
+    <a href="#" class="fas fa-backward"></a>
+    <a href="account" class="logout">Đăng xuất</a> 
+  </div>
+</div> 
+<!--Main-->      
+      <!-- danh sách chọn -->
+      <div class="container-build"> 
+        <div class="list">
+          <div class="list-group">
+            <div class="list-trangchu">
+              <i class="fas fa-home"></i>
+              <a href="#" class="item" >Trang chủ</a>
+            </div>
+            <div class="list-sv">
+              <i class="fas fa-user-graduate"></i>
+              <a href="sinhvien" class="item">Sinh viên</a>
+            </div>
+            <div class="list-khoa">
+              <i class="fas fa-school"></i>
+              <a href="khoa" class="item">Khoa</a>
+            </div>
+            <div class="list-monhoc">
+              <i class="fas fa-book-open"></i>
+              <a href="monhoc" class="item">Môn học</a>
+            </div>
+            <div class="list-diem">
+              <i class="fas fa-folder"></i>
+              <a href="diem" class="item">Điểm</a>
+            </div>
+            <div class="list-gv">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <a href="giaovien" class="item">Giáo viên</a>
+            </div>
+            <div class="list-lop">
+              <i class="fas fa-user-friends"></i>
+              <a href="lophoc" class="item">Lớp học</a>
+            </div>
+          </div>
+        </div>
+        <div class="box main">
+          <!--Nội dung sinh viên-->
+        <div class="box main-sv">
+           <!--Nút thêm-->  
+          <div id="add">
+            <a href="addnew" class="new">
+              Thêm <i class="fas fa-plus"></i>
+            </a>
+          </div>
+          <!--Bảng sinh viên-->
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Mã số sinh viên</th>
+                <th scope="col">Tên sinh viên</th>
+                <th scope="col">Mã lớp</th>
+                <th scope="col">Mã khoa</th>
+                <th scope="col">Ghi chú</th>
+                <th scope="col">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = 'let us of readData' >
+                <th scope="row">{{us.mssv}}</th>
+                <td>{{us.ten}}</td>
+                <td>{{us.ml}}</td>
+                <td>{{us.mk}}</td>
+                <td>{{us.ghichu}}</td>
+                <td>
+                  <!--Button thông tin-->
+                  <a [routerLink]="['/ttsv', us.mssv]">
+                    <button type="button" class="fas fa-eye"></button>&nbsp;&nbsp;</a>
+                    <!--Button update-->
+                  <a [routerLink]="['/update-sv',us.mssv]">
+                    <button   class="fas fa-edit"></button>&nbsp;&nbsp;</a>
+                    <!--Button Deleted-->
+                    <button type="button" class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="deleteID(us.mssv)"></button>  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>    
+      </div>     
+     </div>  
+     

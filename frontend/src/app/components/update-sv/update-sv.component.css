@@ -1,0 +1,76 @@
+.up-sv{
+    width: 80%;
+    height: 780px;
+    text-align: left;
+}
+
+input{
+    width:500px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left:25% ;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 20px;
+}
+
+.up-mssv{
+    margin-top:2%;
+    margin-right: 360px;
+
+}
+
+.up-tensv{
+    
+    margin-right: 380px;
+}
+
+.up-lopsv{
+   
+    margin-right: 440px;
+}
+
+.up-gtsv{
+    
+    margin-right: 410px;
+}
+
+.up-gmsv{ 
+    margin-right: 430px;
+}
+
+.up-khoasv{
+   
+    margin-right: 435px;
+}
+
+.up-dcsv{
+   
+    margin-right: 420px;
+}
+
+.up-gcsv{
+    
+    margin-right: 415px;
+}
+
+.cn{
+    margin-left: 5%;
+    margin-top: 1%;
+    font-size: 25px;
+    color: black;
+}
+
+:root {
+    --bg1:#9b59b6;
+    --bg2: #3498db;
+    --text: #26ade4;
+}
+
+
+.khoangcach{
+    margin-top: 1%;
+}
+
+
+
